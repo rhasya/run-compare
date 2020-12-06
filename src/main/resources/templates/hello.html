@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.1/styles/default.min.css">
+	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.1/highlight.min.js"></script>
+	<script src="hello.js"></script>
+</head>
+<body>
+    <div>
+    	<p>Source</p>
+    	<div style="width: 600px; height: 400px; display: flex;">
+    		<pre style="display: flex; flex-grow: 1; width: 100%;">
+    		<code style="flex-grow: 1; border: 1px solid black; width: 100%; white-space: normal;"
+    			id="codeBlock" class="java" contenteditable
+    			onkeydown="handleKeydown(event)"
+    			onkeypress="handleKeypress(event)"></code>
+   		</pre>
+    	</div>
+    </div>
+    <div>
+    	<button onclick="hljsClick()">hljs</button>
+    </div>
+    <div style="display: flex; flex-direction: row; width: 600px; justify-content: space-between; word-break: break-all;">
+    	<div>
+	    	<p>Correct Answer</p>
+	    	<textarea></textarea>
+    	</div>
+    	<div>
+    		<p>Returned Answer(<span id="duration"></span>)</p>
+    		<textarea readonly id="result"></textarea>
+    	</div>
+    </div>
+    <div>
+    	<button onclick="send()">Send</button>
+    </div>
+</body>
+</html>
